@@ -87,6 +87,13 @@ async function getTransactions(startDate, endDate) {
             currentWindowStart = new Date(currentWindowEnd.getTime() + 1000); 
         }
 
+        // Sort by date descending (Newest first)
+        allTransactions.sort((a, b) => {
+            const dateA = new Date(a.transaction_info.transaction_initiation_date);
+            const dateB = new Date(b.transaction_info.transaction_initiation_date);
+            return dateB - dateA;
+        });
+
         console.log(`Fetched total ${allTransactions.length} transactions across all windows.`);
         return allTransactions;
 
