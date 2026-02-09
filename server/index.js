@@ -12,6 +12,11 @@ app.use(express.json());
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);
 
+// Helper route to check if server is running
+app.get('/', (req, res) => {
+    res.send('PayPal Integration Server is Running! 🚀');
+});
+
 // Export the Express API
 module.exports = app;
 
