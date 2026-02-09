@@ -12,6 +12,11 @@ app.use(express.json());
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// Export the Express API
+module.exports = app;
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+}
