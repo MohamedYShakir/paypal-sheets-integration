@@ -1,0 +1,27 @@
+# PayPal to Google Sheets Integration
+
+- [x] Planning & Setup
+    - [x] Initialize Project Structure (Backend/Frontend)
+    - [x] Create Configuration for API Keys
+- [x] Backend Implementation
+    - [x] Setup Express Server
+    - [x] Implement PayPal Service (Fetch Transactions)
+    - [x] Implement Google Sheets Service (Append/Read Data)
+- [x] Refactor for Google Apps Script
+    - [x] Create Google Apps Script (doPost/doGet)
+    - [x] Deploy GAS as Web App
+    - [x] Update Backend to use GAS Webhook URL
+    - [x] Remove Service Account Complexity
+    - [x] Import Additional Fields (Name)
+    - [x] Import Additional Fields (Fee, Net Amount)
+    - [x] Implement Pagination (Fetch All Pages)
+    - [x] Extend Sync Range to 12 Months
+    - [x] Deduplicate Transactions
+    - [x] Sort Transactions (Newest to Oldest)
+- [x] Frontend Implementation
+    - [x] Setup React + Tailwind
+    - [x] Build Dashboard Component
+    - [x] Implement Filters (Date, Email)
+    - [x] Data Visualization Table
+- [x] Verification
+    - [x] Test End-to-End Flow
