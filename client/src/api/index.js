@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const API = axios.create({ baseURL: API_URL });
 
 export const syncTransactions = () => API.get('/sync');
 export const getSheetData = () => API.get('/data');
